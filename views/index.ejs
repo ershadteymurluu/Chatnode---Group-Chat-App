@@ -1,0 +1,31 @@
+<%- include('partials/head.ejs') %> 
+    <div id="ChatEnter">
+        <div class="top">
+            <i class="fa-solid fa-face-smile-beam" style="font-size: 25px; color:white;"></i> <span class="chat-title">Chatnode</span>
+        </div>
+        <div class="wrapper">
+            <form action="/chat">
+                <div class="username-field field">
+                    <label>Username</label>
+                    <input class="form-control" type="text" name="username">
+                </div>
+                <div class="select-room-field field">
+                    <label>Room</label>
+                    <select class="form-control" name="room">
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                        <option value="Java">Java</option>
+                        <option value="NodeJS">NodeJS</option>
+                        <option value="Express">Express</option>
+                        <option value="EJS">EJS</option>
+                        <option value=".NET">.NET</option>
+                    </select>
+                </div>
+                <div class="submitBtn">
+                    <button type="submit">Join Chat</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('partials/closingtags') %>

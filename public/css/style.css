@@ -1,0 +1,163 @@
+p{
+    margin: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #BCCEF8;
+    letter-spacing: 0.6px;
+}
+
+#ChatEnter{
+    width: 100%;
+    max-width: 500px;
+    background-color:  #60a9ff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #0000002e;
+}
+
+#ChatEnter .top{
+    text-align: center;
+    background-color: #278afb;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #0000002e;
+}
+#ChatEnter .top .chat-title{
+    font-size: 25px;
+}
+#ChatEnter .wrapper{
+    padding: 20px 30px;
+}
+.submitBtn{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.field label{
+    margin-bottom: 5px;
+    color: white;
+}
+.submitBtn button{
+    padding: 8px 20px;
+    border: none;
+    background-color: white;
+    color:  #60a9ff;
+    border-radius: 5px;
+    transition: background-color .3s ease;
+}
+
+.submitBtn button:hover{
+    background-color: #f0f5fb;
+}
+
+/* Chat */
+
+#roomContainer{
+    /* border: 1px solid black; */
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 1px 0px 12px 3px #0000003d;
+
+}
+#roomContainer .top{
+    display: flex;
+    justify-content: space-between;
+    background-color: #278afb;
+    align-items: center;
+    padding: 8px 15px;
+}
+.chat-title{
+    color: white;
+    font-size: 20px;
+}
+
+.leave-roomBtn{
+    padding: 5px 10px;
+    background-color: #60a9ff;
+    text-decoration: none;
+    color: white;
+}
+.leave-roomBtn:hover{
+    color: white;
+}
+
+.middle{
+    display: flex;
+    max-height: 300px;
+    min-height: 300px;
+}
+.room-info{
+    flex-basis: 40%;
+    background-color: #3591fa;
+    color: white;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.middle .roomName{
+    background-color: #0c78f3;
+    padding: 5px;
+    margin: 10px 0px;
+}
+.middle .room-info ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0px;
+}
+.middle ul li{
+    font-size: 14px;
+}
+.middle .chat{
+    flex-basis: 60%;
+    background-color: white;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.middle .chat .message{
+    background-color: #d1e6ff;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
+}
+.message-sender{
+    color: #0c78f3;
+}
+.time{
+    font-size: 12px;
+}
+.bottom{
+    padding: 10px;
+    background-color: #0c78f3;
+}
+.bottom .wrapper{
+    position: relative;
+}
+.bottom .wrapper button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 10px;
+    border: none;
+    background-color: #60a9ff;
+    color: white;
+}
+
+@media (max-width:500px){
+    .room-info{
+        display: none;
+    }
+    .chat{
+        min-width: 100%;
+    }
+    .message-sender{
+        font-size: 14px;
+    }
+    .chat .text{
+        font-size: 14px;
+    }
+}

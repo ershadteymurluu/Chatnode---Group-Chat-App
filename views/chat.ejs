@@ -1,0 +1,29 @@
+<%- include('partials/head.ejs') %>
+    <div id="roomContainer">
+        <div class="top">
+            <div><i class="fa-solid fa-face-smile-beam" style="font-size: 25px; color:white;"></i> <span
+                    class="chat-title">Chatnode</span></div>
+            <a class="leave-roomBtn" href="/">Leave room</a>
+        </div>
+        <div class="middle">
+            <div class="room-info">
+                <i class="fa-regular fa-comments"></i> Room Name:
+                <p class="roomName"><%= room %></p>
+                <i class="fa-solid fa-users"></i> Users (<span class="userCount">0</span>)
+                <ul class="roomUsers"></ul>
+            </div>
+            <div class="chat"></div>
+        </div>
+        <div class="bottom">
+            <div class="wrapper">
+                <form class="form-group" id="message-sendForm">
+                    <input class="form-control" type="text" placeholder="Enter message...."  name="message" required autocomplete="off">
+                    <button type="submit"><i class="fa-solid fa-paper-plane" style="margin-right: 2px;"></i> Send</button>    
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+<%- include('partials/closingtags') %>
